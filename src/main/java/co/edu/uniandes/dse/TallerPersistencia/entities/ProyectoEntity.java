@@ -6,7 +6,7 @@ import jakarta.persistence.OneToMany;
 @Entity
 public class ProyectoEntity {
     
-   @OneToMany
+   @OneToMany(mappedBy = "proyecto", orphanRemoval = true)
    private TareaEntity tarea;
 
    private String nombre;
